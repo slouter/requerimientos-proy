@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Proveedor de pagos" version="4">
+  <OBJECT>
+    <ID name="Proveedor de pagos" mc="Standard.Actor" uid="07da9840-f9a9-4e7b-9658-474ed6f263ad"/>
+    <PID name="Actores del negocio" mc="Standard.Package" uid="6c337b73-628f-4ff0-8050-eec8863afebf"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Proveedor de pagos]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>
