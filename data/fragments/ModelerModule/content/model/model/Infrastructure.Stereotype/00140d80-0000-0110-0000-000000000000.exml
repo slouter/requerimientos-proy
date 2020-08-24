@@ -5,8 +5,9 @@
     <PID name="default" mc="Infrastructure.Profile" uid="007004e8-0000-0282-0000-000000000000"/>
     <ATTRIBUTES>
       <ATT name="Image"></ATT>
-      <ATT name="Icon"><![CDATA[res/bmp/ramcarchive.png]]></ATT>
+      <ATT name="Icon"><![CDATA[res/icon/ramcarchive.png]]></ATT>
       <ATT name="IsHidden">true</ATT>
+      <ATT name="IsAbstract">false</ATT>
       <ATT name="LabelKey"><![CDATA[%stereotype.ModelComponentArchive.label]]></ATT>
       <ATT name="BaseClassName"><![CDATA[Standard.Artifact]]></ATT>
       <ATT name="Name"><![CDATA[ModelComponentArchive]]></ATT>

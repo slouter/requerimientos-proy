@@ -5,8 +5,9 @@
     <PID name="default" mc="Infrastructure.Profile" uid="007004e8-0000-0282-0000-000000000000"/>
     <ATTRIBUTES>
       <ATT name="Image"></ATT>
-      <ATT name="Icon"><![CDATA[res/bmp/dependency_seealso.png]]></ATT>
+      <ATT name="Icon"><![CDATA[res/icon/dependency_seealso.png]]></ATT>
       <ATT name="IsHidden">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
       <ATT name="LabelKey"><![CDATA[%stereotype.see_also.label]]></ATT>
       <ATT name="BaseClassName"><![CDATA[Infrastructure.Dependency]]></ATT>
       <ATT name="Name"><![CDATA[see_also]]></ATT>

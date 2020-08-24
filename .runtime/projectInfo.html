@@ -1,12 +1,17 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Info</title>
 
-<link rel="stylesheet" href="file:///C:/Users/luis torres simbron/.modelio/3.7/.eclipse/configuration.x86_64.os/org.eclipse.osgi/211/0/.cp/res/projectInfo.css" type="text/css"></link>
+<link rel='stylesheet' href='file:///C:/Users/luis torres simbron/.modelio/4.0/opensource4.0.1-cache/conf/org.eclipse.osgi/223/0/.cp/res/bootstrap.min.css' type='text/css'></link>
+<link rel='stylesheet' href='file:///C:/Users/luis torres simbron/.modelio/4.0/opensource4.0.1-cache/conf/org.eclipse.osgi/223/0/.cp/res/projectInfo.css' type='text/css'></link>
 
-<script src="file:///C:/Users/luis torres simbron/.modelio/3.7/.eclipse/configuration.x86_64.os/org.eclipse.osgi/211/0/.cp/res/projectInfo.js" type="text/javascript"></script>
+
+<script src='file:///C:/Users/luis torres simbron/.modelio/4.0/opensource4.0.1-cache/conf/org.eclipse.osgi/223/0/.cp/res/projectInfo.js' type='text/javascript'></script>
+<script src='file:///C:/Users/luis torres simbron/.modelio/4.0/opensource4.0.1-cache/conf/org.eclipse.osgi/223/0/.cp/res/jquery-3.3.1.slim.min.js' type='text/javascript'></script>
+<script src='file:///C:/Users/luis torres simbron/.modelio/4.0/opensource4.0.1-cache/conf/org.eclipse.osgi/223/0/.cp/res/bootstrap.bundle.min.js' type='text/javascript'></script>
+
 
 <script type="text/javascript">
 	window.onload = function()
@@ -17,111 +22,74 @@
 	function sendEmailTo() {
 		window.open('mailto:?subject=Proyecto%20Tema%20Final');
 	}
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	})
 </script>
 
 </head>
 
 <body style="font-family:Segoe UI; font-size:9pt">
 <div id="wrapper">
-	<h1> Proyecto Tema Final</h1>
-	<div class="horizontal-content">
-	<div id="project-description">
-		<p></p>
-	</div>
-	<div id="project-infos" class="box-infos">
-		<table>
+	<h1> Proyecto Tema Final</h1>	
+	<section>
+	
+	</section>
+	<section>
+		<h2>Summary</h2>
+		<table class="box-infos">
 			<tr>
-				<td><label>Contact:</label></td>
-				<!--<a href="mailto:?Subject=Proyecto%20Tema%20Final"></a>-->
-				<td><div id="mailcontainer"><input class="emailInput" type="text" value="" readonly="readonly"></input><span class="sendMail" onclick="sendEmailTo()" style="display: none">&nbsp</span></div></td>
+				<td class="label">Contact:</td>
+				<td><div id="mailcontainer"><input class="emailInput" type="text" value="" readonly="readonly" /><span class="sendMail" onclick="sendEmailTo()" style="display: none">&nbsp</span></div></td>
 			</tr>
 			<tr>
-				<td><label>Last modification:</label></td>
-				<td><span>08-23-2020 18:43:32</span></td>
-			</tr>
-      <tr>
-				<td><label>Version:</label></td>
-				<td><input class="readonlyInput project_version_same" type="text" value="3.7.00" readonly="readonly"></input></td>
+				<td class="label">Version:</td>
+				<td>4.0.01</td>
 			</tr>
 			<tr>
-				<td><label>Path:</label></td>
-				<td><input class="readonlyInput" type="text" value="D:\MI TOWER PC\UPC\ciclo 7\Ingenieria de requerimientos\Proyecto Tema Final" readonly="readonly"></input></td>
+				<td class="label">Path:</td>
+				<td>D:\MI TOWER PC\UPC\ciclo 7\Ingenieria de requerimientos\Proyecto Tema Final</td>
+			</tr>
+			<tr style="display: none;">
+				<td class="label">Remote location:</td>
+				<td>$project_remote_location</td>
+			</tr>
+			<tr style="display: none;">
+				<td class="label">Login:</td>
+				<td>$project_login</td>
 			</tr>
 			<tr>
-				<td><label>Remote location:</label></td>
-				<td><input class="readonlyInput" type="text" value="" readonly="readonly"></input></td>
+				<td class="label">Last modification:</td>
+				<td>08-23-2020 20:55:16</td>
 			</tr>
 		</table>
-	</div>
-	</div>
-	<div id="AccordionContainerWorkModels" class="AccordionContainer">
-		<div onclick="runAccordion('WorkModels');" class="AccordionHeader">
-		<div class="AccordionTitle acc-opened" id="AccordionWorkModelsTitle" onselectstart="return true;">
-			Work models
-		</div>
-		</div>
-		<div id="AccordionWorkModelsContent" class="AccordionContent">
-			<table id="workModelsTbl" border="0" >
-				<tr>
-					<th>Name</th>
-					<th>Type</th>
-					<th>Url</th>
-				</tr>
-				<tr><td><img src="file:///C:/Users/luis torres simbron/.modelio/3.7/.eclipse/configuration.x86_64.os/org.eclipse.osgi/211/0/.cp/icons/exmlfragment.png"> Proyecto Tema Final</td><td>Local</td><td></td></tr>
-				<!-- part generate
-				<tr>
-					<td><img src="ramcfragment.png"> $fragment_name</td>
-				</tr>
-				-->
-			</table>
-		</div>
-	</div>
+	</section>
+	<section>
+		<h2>Content</h2>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md">
+					<h3>Work models</h3>
+					<div class="contentlist" id="AccordionContainerWorkModels">				
+					<div class='listitem'><span><img src="file:///C:/Users/luis torres simbron/.modelio/4.0/opensource4.0.1-cache/conf/org.eclipse.osgi/247/0/.cp/icons/exmlfragment.png"> Proyecto Tema Final</span></div>				
+					</div>
+				</div>
+				<div class="col-md">
+					<h3>Libraries</h3>
+					<div class="contentlist" id="AccordionContainerLibraries">				
+					<div class='listitem'><span data-toggle="tooltip" data-html="true" title="Predefined types model component provides the default types for UML and Analyst models."><img src="file:///C:/Users/luis torres simbron/.modelio/4.0/opensource4.0.1-cache/conf/org.eclipse.osgi/247/0/.cp/icons/ramcfragment.png"> PredefinedTypes 3.9.00</span></div>				
+					</div>
+				</div>
+				<div class="col-md">
+					<h3>Modules</h3>
+					<div class="contentlist">				
+					<div class='listitem'><img src="file:///C:/Users/luis torres simbron/.modelio/4.0/opensource4.0.1-cache/conf/org.eclipse.osgi/247/0/.cp/icons/mdafragment.png"> ModelerModule 9.1.00</div>				
+					</div>
+				</div>
+			</div>
+		</div>			
+	</section>
 
-	<div id="AccordionContainerLibraries" class="AccordionContainer">
-		<div onclick="runAccordion('Libraries');" class="AccordionHeader">
-		<div class="AccordionTitle acc-opened" id="AccordionLibrariesTitle" onselectstart="return true;">
-			Libraries
-		</div>
-		</div>
-		<div id="AccordionLibrariesContent" class="AccordionContent">
-			<table id="librariesTbl" border="0" >
-				<tr>
-					<th>Name</th>
-					<th>Version</th>
-					<th>Description</th>
-				</tr>
-				<tr><td><img src="file:///C:/Users/luis torres simbron/.modelio/3.7/.eclipse/configuration.x86_64.os/org.eclipse.osgi/211/0/.cp/icons/ramcfragment.png"> PredefinedTypes 3.7.04</td><td>3.7.04</td><td><div class='librarieDescriptorTextarea'>Predefined types model component provides the default types for UML and Analyst models.</div></td></tr>
-				<!-- part generate
-				<tr>
-					<td><img src="ramcfragment.png"> $fragment_name</td>
-				</tr>
-				-->
-			</table>
-		</div>
-	</div>
-
-	<div id="AccordionContainerModules" class="AccordionContainer">
-		<div onclick="runAccordion('Modules');" class="AccordionHeader">
-		<div class="AccordionTitle acc-opened" id="AccordionModulesTitle" onselectstart="return true;">
-			Modules
-		</div>
-		</div>
-		<div id="AccordionModulesContent" class="AccordionContent">
-			<table id="modulesTbl" border="0">
-				<tr>
-					<th>Name</th>
-					<th>Version</th>
-				</tr>
-				<tr><td><img src="file:///C:/Users/luis torres simbron/.modelio/3.7/.eclipse/configuration.x86_64.os/org.eclipse.osgi/211/0/.cp/icons/modulecomponent.png"> ModelerModule</td><td>8.8.09</td></tr>
-				<!-- part generate
-				<tr>
-					<td><img src="ramcfragment.png"> $modules_name</td>
-					<td>$modules_version</td>
-				</tr>
-				-->
-			</table>
-		</div>
-	</div>
 </div>
 </body>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metamodel format="1" MetamodelDescriptor.format="1">
-  <fragment name="Infrastructure" version="2.1.00" provider="Modeliosoft" providerVersion="3.7.00">
+  <fragment name="Infrastructure" version="2.1.03" provider="Modeliosoft" providerVersion="3.8.01">
     <dependencies>
       <metamodel_fragment name="modelio.kernel" version="1.0.00"/>
     </dependencies>
@@ -9,6 +9,7 @@
         <parent fragment="Infrastructure" name="ModelElement"/>
         <attribute name="UiDataVersion" type="java.lang.Integer"></attribute>
         <attribute name="UiData" type="java.lang.String"></attribute>
+        <attribute name="PreviewData" type="java.lang.String"></attribute>
         <dependency name="Represented" min="0" max="-1" navigate="true" weakReference="true">
           <target fragment="Infrastructure" name="Element"/>
           <opposite name="DiagramElement"/>
@@ -111,6 +112,16 @@
           <opposite name="EnumType"/>
         </dependency>
       </metaclass>
+      <metaclass name="ExternElement" version="0.0.00">
+        <parent fragment="Infrastructure" name="ModelElement"/>
+        <attribute name="Provider" type="java.lang.String"></attribute>
+        <attribute name="ExternId" type="java.lang.String"></attribute>
+        <attribute name="Location" type="java.lang.String"></attribute>
+        <dependency name="Owner" min="1" max="1" navigate="false">
+          <target fragment="Infrastructure" name="MethodologicalLink"/>
+          <opposite name="ExternElement"/>
+        </dependency>
+      </metaclass>
       <metaclass name="ExternProcessor" version="0.0.9054">
         <parent fragment="Infrastructure" name="ModelElement"/>
         <attribute name="ClassName" type="java.lang.String"></attribute>
@@ -122,6 +133,9 @@
           <target fragment="Infrastructure" name="MatrixValueDefinition"/>
           <opposite name="Processor"/>
         </dependency>
+      </metaclass>
+      <metaclass name="GraphDiagram" version="2.1.02" cmsNode="true">
+        <parent fragment="Infrastructure" name="AbstractDiagram"/>
       </metaclass>
       <metaclass name="ImpactDiagram" version="3.6.00" cmsNode="true">
         <parent fragment="Infrastructure" name="AbstractDiagram"/>
@@ -238,6 +252,19 @@
           <opposite name="OwnerReference"/>
         </dependency>
       </metaclass>
+      <link_metaclass name="MethodologicalLink" version="2.1.01">
+        <parent fragment="Infrastructure" name="Dependency"/>
+        <dependency name="ExternElement" min="0" max="1" aggregation="Composition" navigate="true">
+          <target fragment="Infrastructure" name="ExternElement"/>
+          <opposite name="Owner"/>
+        </dependency>
+        <sources>
+          <dep name="Impacted"/>
+        </sources>
+        <targets>
+          <dep name="DependsOn"/>
+        </targets>
+      </link_metaclass>
       <metaclass name="ModelElement" version="3.6.00" abstract="true">
         <parent fragment="Infrastructure" name="Element"/>
         <attribute name="Name" type="java.lang.String"></attribute>
@@ -514,6 +541,7 @@
         <attribute name="Image" type="java.lang.String"></attribute>
         <attribute name="Icon" type="java.lang.String"></attribute>
         <attribute name="IsHidden" type="java.lang.Boolean"></attribute>
+        <attribute name="IsAbstract" type="java.lang.Boolean"></attribute>
         <attribute name="LabelKey" type="java.lang.String"></attribute>
         <attribute name="BaseClassName" type="java.lang.String"></attribute>
         <dependency name="DefinedTable" min="0" max="1" aggregation="Composition" navigate="true">
@@ -636,10 +664,10 @@
       </enumeration>
     </enumerations>
   </fragment>
-  <fragment name="Standard" version="2.2.00" provider="Modeliosoft" providerVersion="3.7.00">
+  <fragment name="Standard" version="2.3.00" provider="Modeliosoft" providerVersion="3.8.00">
     <dependencies>
       <metamodel_fragment name="modelio.kernel" version="1.0.00"/>
-      <metamodel_fragment name="Infrastructure" version="2.1.00"/>
+      <metamodel_fragment name="Infrastructure" version="2.1.02"/>
     </dependencies>
     <metaclasses>
       <metaclass name="AbstractPseudoState" version="0.0.9054" abstract="true">
@@ -879,10 +907,6 @@
           <target fragment="Standard" name="Association"/>
           <opposite name="End"/>
         </dependency>
-        <dependency name="RepresentingItem" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnItemAwareElement"/>
-          <opposite name="RepresentedAssociationEnd"/>
-        </dependency>
         <sources>
           <dep name="Source"/>
         </sources>
@@ -906,10 +930,6 @@
         <dependency name="Occurence" min="0" max="-1" navigate="false">
           <target fragment="Standard" name="AttributeLink"/>
           <opposite name="Base"/>
-        </dependency>
-        <dependency name="RepresentingItem" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnItemAwareElement"/>
-          <opposite name="RepresentedAttribute"/>
         </dependency>
         <dependency name="RepresentingObjectNode" min="0" max="-1" navigate="false">
           <target fragment="Standard" name="ObjectNode"/>
@@ -935,10 +955,6 @@
       <metaclass name="Behavior" version="0.0.9054" abstract="true">
         <parent fragment="Standard" name="UmlModelElement"/>
         <attribute name="IsReentrant" type="java.lang.Boolean"></attribute>
-        <dependency name="BpmnCaller" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnCallActivity"/>
-          <opposite name="CalledBehavior"/>
-        </dependency>
         <dependency name="Owner" min="0" max="1" navigate="false">
           <target fragment="Standard" name="NameSpace"/>
           <opposite name="OwnedBehavior"/>
@@ -1120,6 +1136,10 @@
           <target fragment="Standard" name="BpmnMessageFlow"/>
           <opposite name="SourceRef"/>
         </dependency>
+        <dependency name="PartitionedLaneRefs" min="0" max="-1" navigate="false">
+          <target fragment="Standard" name="BpmnLane"/>
+          <opposite name="BpmnPartitionElementRef"/>
+        </dependency>
       </metaclass>
       <metaclass name="BpmnBoundaryEvent" version="0.0.9054">
         <parent fragment="Standard" name="BpmnCatchEvent"/>
@@ -1137,14 +1157,6 @@
         <dependency name="CalledGlobalTask" min="0" max="1" navigate="true">
           <target fragment="Standard" name="BpmnTask"/>
           <opposite name="Caller"/>
-        </dependency>
-        <dependency name="CalledOperation" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="Operation"/>
-          <opposite name="Caller"/>
-        </dependency>
-        <dependency name="CalledBehavior" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="Behavior"/>
-          <opposite name="BpmnCaller"/>
         </dependency>
       </metaclass>
       <metaclass name="BpmnCancelEventDefinition" version="0.0.9054">
@@ -1258,10 +1270,6 @@
       <metaclass name="BpmnDataInput" version="0.0.9054">
         <parent fragment="Standard" name="BpmnItemAwareElement"/>
         <attribute name="IsCollection" type="java.lang.Boolean"></attribute>
-        <dependency name="RepresentedParameter" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="Parameter"/>
-          <opposite name="BpmnRepresentingDataInput"/>
-        </dependency>
         <dependency name="OwnerLoopCharacteristics" min="0" max="1" navigate="false">
           <target fragment="Standard" name="BpmnMultiInstanceLoopCharacteristics"/>
           <opposite name="LoopDataInput"/>
@@ -1282,10 +1290,6 @@
       <metaclass name="BpmnDataOutput" version="0.0.9054">
         <parent fragment="Standard" name="BpmnItemAwareElement"/>
         <attribute name="IsCollection" type="java.lang.Boolean"></attribute>
-        <dependency name="RepresentedParameter" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="Parameter"/>
-          <opposite name="BpmnRepresentingDataOutput"/>
-        </dependency>
         <dependency name="OwnerActivity" min="0" max="1" navigate="false">
           <target fragment="Standard" name="BpmnActivity"/>
           <opposite name="OutputSpecification"/>
@@ -1304,10 +1308,6 @@
         <dependency name="Item" min="1" max="1" navigate="false">
           <target fragment="Standard" name="BpmnItemAwareElement"/>
           <opposite name="DataState"/>
-        </dependency>
-        <dependency name="UmlState" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="State"/>
-          <opposite name="BpmnDataStateRefs"/>
         </dependency>
       </metaclass>
       <metaclass name="BpmnDataStore" version="0.0.9054">
@@ -1426,10 +1426,6 @@
       </metaclass>
       <metaclass name="BpmnInterface" version="0.0.9054">
         <parent fragment="Standard" name="BpmnSharedElement"/>
-        <dependency name="ImplementationRef" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="GeneralClass"/>
-          <opposite name="BpmnInterfaceRefs"/>
-        </dependency>
         <dependency name="Operation" min="0" max="-1" aggregation="Composition" navigate="true">
           <target fragment="Standard" name="BpmnOperation"/>
           <opposite name="BpmnInterfaceRef"/>
@@ -1447,10 +1443,6 @@
       </metaclass>
       <metaclass name="BpmnItemAwareElement" version="0.0.9054" abstract="true">
         <parent fragment="Standard" name="BpmnFlowElement"/>
-        <dependency name="Type" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="GeneralClass"/>
-          <opposite name="BpmnItemAwareRefs"/>
-        </dependency>
         <dependency name="TargetOfDataAssociation" min="0" max="-1" navigate="false">
           <target fragment="Standard" name="BpmnDataAssociation"/>
           <opposite name="TargetRef"/>
@@ -1458,14 +1450,6 @@
         <dependency name="ItemSubjectRef" min="0" max="1" navigate="true">
           <target fragment="Standard" name="BpmnItemDefinition"/>
           <opposite name="TypedItem"/>
-        </dependency>
-        <dependency name="InState" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="State"/>
-          <opposite name="RequiredStateOfBpmnItem"/>
-        </dependency>
-        <dependency name="RepresentedAssociationEnd" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="AssociationEnd"/>
-          <opposite name="RepresentingItem"/>
         </dependency>
         <dependency name="DataState" min="0" max="1" aggregation="Composition" navigate="true">
           <target fragment="Standard" name="BpmnDataState"/>
@@ -1475,23 +1459,11 @@
           <target fragment="Standard" name="BpmnDataAssociation"/>
           <opposite name="SourceRef"/>
         </dependency>
-        <dependency name="RepresentedAttribute" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="Attribute"/>
-          <opposite name="RepresentingItem"/>
-        </dependency>
-        <dependency name="RepresentedInstance" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="Instance"/>
-          <opposite name="RepresentingItem"/>
-        </dependency>
       </metaclass>
       <metaclass name="BpmnItemDefinition" version="0.0.9054">
         <parent fragment="Standard" name="BpmnSharedElement"/>
         <attribute name="ItemKind" type="java.lang.Enum" enumType="org.modelio.metamodel.bpmn.objects.BpmnItemKind"></attribute>
         <attribute name="IsCollection" type="java.lang.Boolean"></attribute>
-        <dependency name="StructureRef" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="GeneralClass"/>
-          <opposite name="BpmnItemDefinitionRefs"/>
-        </dependency>
         <dependency name="TypedMessage" min="0" max="-1" navigate="false">
           <target fragment="Standard" name="BpmnMessage"/>
           <opposite name="ItemRef"/>
@@ -1511,10 +1483,6 @@
           <target fragment="Standard" name="BpmnLaneSet"/>
           <opposite name="ParentLane"/>
         </dependency>
-        <dependency name="PartitionElement" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="UmlModelElement"/>
-          <opposite name="BpmnLaneRefs"/>
-        </dependency>
         <dependency name="FlowElementRef" min="0" max="-1" navigate="true" cascadeDelete="true">
           <target fragment="Standard" name="BpmnFlowElement"/>
           <opposite name="Lane"/>
@@ -1522,6 +1490,10 @@
         <dependency name="LaneSet" min="1" max="1" navigate="false">
           <target fragment="Standard" name="BpmnLaneSet"/>
           <opposite name="Lane"/>
+        </dependency>
+        <dependency name="BpmnPartitionElementRef" min="0" max="1" navigate="true">
+          <target fragment="Standard" name="BpmnBaseElement"/>
+          <opposite name="PartitionedLaneRefs"/>
         </dependency>
       </metaclass>
       <metaclass name="BpmnLaneSet" version="0.0.9054">
@@ -1566,10 +1538,6 @@
       </metaclass>
       <metaclass name="BpmnMessage" version="0.0.9054">
         <parent fragment="Standard" name="BpmnSharedElement"/>
-        <dependency name="Type" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="GeneralClass"/>
-          <opposite name="BpmnMessageRefs"/>
-        </dependency>
         <dependency name="OutputMessage" min="0" max="-1" navigate="false">
           <target fragment="Standard" name="BpmnOperation"/>
           <opposite name="OutMessageRef"/>
@@ -1577,10 +1545,6 @@
         <dependency name="ItemRef" min="0" max="1" navigate="true">
           <target fragment="Standard" name="BpmnItemDefinition"/>
           <opposite name="TypedMessage"/>
-        </dependency>
-        <dependency name="InState" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="State"/>
-          <opposite name="RequiredStateOfBpmnMessage"/>
         </dependency>
         <dependency name="EventDefinition" min="0" max="-1" navigate="false">
           <target fragment="Standard" name="BpmnMessageEventDefinition"/>
@@ -1688,10 +1652,6 @@
           <target fragment="Standard" name="BpmnMessageEventDefinition"/>
           <opposite name="OperationRef"/>
         </dependency>
-        <dependency name="ImplementationRef" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="Operation"/>
-          <opposite name="BpmnOperationRef"/>
-        </dependency>
         <dependency name="BpmnInterfaceRef" min="1" max="1" navigate="false">
           <target fragment="Standard" name="BpmnInterface"/>
           <opposite name="Operation"/>
@@ -1716,10 +1676,6 @@
           <target fragment="Standard" name="BpmnCollaboration"/>
           <opposite name="Participants"/>
         </dependency>
-        <dependency name="Type" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="Classifier"/>
-          <opposite name="BpmnRepresents"/>
-        </dependency>
         <dependency name="EndPointRefs" min="0" max="-1" navigate="true">
           <target fragment="Standard" name="BpmnEndPoint"/>
           <opposite name="ParticipantRefs"/>
@@ -1727,10 +1683,6 @@
         <dependency name="InterfaceRefs" min="0" max="-1" navigate="true">
           <target fragment="Standard" name="BpmnInterface"/>
           <opposite name="ParticipantRef"/>
-        </dependency>
-        <dependency name="PackageRef" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="Package"/>
-          <opposite name="BpmnRepresents"/>
         </dependency>
       </metaclass>
       <metaclass name="BpmnProcess" version="2.2.00" cmsNode="true">
@@ -1788,10 +1740,6 @@
         <dependency name="OperationRef" min="0" max="1" navigate="true">
           <target fragment="Standard" name="BpmnOperation"/>
           <opposite name="Receiver"/>
-        </dependency>
-        <dependency name="CalledOperation" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="Operation"/>
-          <opposite name="CallerReceiveTask"/>
         </dependency>
       </metaclass>
       <metaclass name="BpmnResource" version="0.0.9054">
@@ -1868,10 +1816,6 @@
           <target fragment="Standard" name="BpmnOperation"/>
           <opposite name="Sender"/>
         </dependency>
-        <dependency name="CalledOperation" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="Operation"/>
-          <opposite name="CallerSendTask"/>
-        </dependency>
       </metaclass>
       <link_metaclass name="BpmnSequenceFlow" version="0.0.9054">
         <parent fragment="Standard" name="BpmnFlowElement"/>
@@ -1926,10 +1870,6 @@
       <metaclass name="BpmnServiceTask" version="0.0.9054">
         <parent fragment="Standard" name="BpmnTask"/>
         <attribute name="Implementation" type="java.lang.String"></attribute>
-        <dependency name="CalledOperation" min="0" max="1" navigate="true">
-          <target fragment="Standard" name="Operation"/>
-          <opposite name="CallerServiceTask"/>
-        </dependency>
         <dependency name="OperationRef" min="0" max="1" navigate="true">
           <target fragment="Standard" name="BpmnOperation"/>
           <opposite name="Caller"/>
@@ -2104,10 +2044,6 @@
         <dependency name="OwnedEnd" min="0" max="-1" aggregation="Composition" navigate="true">
           <target fragment="Standard" name="AssociationEnd"/>
           <opposite name="Source"/>
-        </dependency>
-        <dependency name="BpmnRepresents" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnParticipant"/>
-          <opposite name="Type"/>
         </dependency>
         <dependency name="Throwing" min="0" max="-1" navigate="false" cascadeDelete="true">
           <target fragment="Standard" name="RaisedException"/>
@@ -2630,10 +2566,6 @@
       <metaclass name="GeneralClass" version="0.0.9054" abstract="true">
         <parent fragment="Standard" name="Classifier"/>
         <attribute name="IsElementary" type="java.lang.Boolean"></attribute>
-        <dependency name="BpmnInterfaceRefs" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnInterface"/>
-          <opposite name="ImplementationRef"/>
-        </dependency>
         <dependency name="Occurence" min="0" max="-1" navigate="false">
           <target fragment="Standard" name="Parameter"/>
           <opposite name="Type"/>
@@ -2646,24 +2578,12 @@
           <target fragment="Standard" name="Attribute"/>
           <opposite name="Type"/>
         </dependency>
-        <dependency name="BpmnMessageRefs" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnMessage"/>
-          <opposite name="Type"/>
-        </dependency>
         <dependency name="SRepresentation" min="0" max="-1" navigate="false">
           <target fragment="Standard" name="Signal"/>
           <opposite name="Base"/>
         </dependency>
-        <dependency name="BpmnItemDefinitionRefs" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnItemDefinition"/>
-          <opposite name="StructureRef"/>
-        </dependency>
         <dependency name="OccurenceObjectNode" min="0" max="-1" navigate="false">
           <target fragment="Standard" name="ObjectNode"/>
-          <opposite name="Type"/>
-        </dependency>
-        <dependency name="BpmnItemAwareRefs" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnItemAwareElement"/>
           <opposite name="Type"/>
         </dependency>
       </metaclass>
@@ -2783,10 +2703,6 @@
         <dependency name="RepresentedCommunicationNode" min="0" max="-1" navigate="false">
           <target fragment="Standard" name="CommunicationNode"/>
           <opposite name="Represented"/>
-        </dependency>
-        <dependency name="RepresentingItem" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnItemAwareElement"/>
-          <opposite name="RepresentedInstance"/>
         </dependency>
         <dependency name="OwnedEnd" min="0" max="-1" aggregation="Composition" navigate="true">
           <target fragment="Standard" name="LinkEnd"/>
@@ -3055,11 +2971,12 @@
           <dep name="UtilizedElement"/>
         </targets>
       </link_metaclass>
-      <link_metaclass name="Message" version="0.0.9054">
+      <link_metaclass name="Message" version="2.2.01">
         <parent fragment="Standard" name="UmlModelElement"/>
         <attribute name="Argument" type="java.lang.String"></attribute>
         <attribute name="KindOfMessage" type="java.lang.Enum" enumType="org.modelio.metamodel.uml.behavior.interactionModel.MessageKind"></attribute>
         <attribute name="SortOfMessage" type="java.lang.Enum" enumType="org.modelio.metamodel.uml.behavior.interactionModel.MessageSort"></attribute>
+        <attribute name="Sequence" type="java.lang.String"></attribute>
         <dependency name="SignalSignature" min="0" max="1" navigate="true">
           <target fragment="Standard" name="Signal"/>
           <opposite name="Usage"/>
@@ -3372,10 +3289,6 @@
           <target fragment="Standard" name="RaisedException"/>
           <opposite name="Thrower"/>
         </dependency>
-        <dependency name="CallerReceiveTask" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnReceiveTask"/>
-          <opposite name="CalledOperation"/>
-        </dependency>
         <dependency name="Redefinition" min="0" max="-1" navigate="false">
           <target fragment="Standard" name="Operation"/>
           <opposite name="Redefines"/>
@@ -3391,14 +3304,6 @@
         <dependency name="OwnedBehavior" min="0" max="-1" aggregation="Composition" navigate="true">
           <target fragment="Standard" name="Behavior"/>
           <opposite name="OwnerOperation"/>
-        </dependency>
-        <dependency name="BpmnOperationRef" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnOperation"/>
-          <opposite name="ImplementationRef"/>
-        </dependency>
-        <dependency name="CallerSendTask" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnSendTask"/>
-          <opposite name="CalledOperation"/>
         </dependency>
         <dependency name="IO" min="0" max="-1" aggregation="Composition" navigate="true">
           <target fragment="Standard" name="Parameter"/>
@@ -3432,10 +3337,6 @@
           <target fragment="Standard" name="TemplateParameter"/>
           <opposite name="ParameterizedOperation"/>
         </dependency>
-        <dependency name="CallerServiceTask" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnServiceTask"/>
-          <opposite name="CalledOperation"/>
-        </dependency>
         <dependency name="Occurence" min="0" max="-1" navigate="false">
           <target fragment="Standard" name="Event"/>
           <opposite name="Called"/>
@@ -3456,10 +3357,6 @@
           <target fragment="Standard" name="Operation"/>
           <opposite name="Redefinition"/>
         </dependency>
-        <dependency name="Caller" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnCallActivity"/>
-          <opposite name="CalledOperation"/>
-        </dependency>
         <dependency name="CallingAction" min="0" max="-1" navigate="false">
           <target fragment="Standard" name="CallOperationAction"/>
           <opposite name="Called"/>
@@ -3479,10 +3376,6 @@
       <metaclass name="Package" version="1.1.01" cmsNode="true">
         <parent fragment="Standard" name="NameSpace"/>
         <attribute name="IsInstantiable" type="java.lang.Boolean"></attribute>
-        <dependency name="BpmnRepresents" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnParticipant"/>
-          <opposite name="PackageRef"/>
-        </dependency>
         <dependency name="ReceivingMerge" min="0" max="-1" navigate="false" cascadeDelete="true">
           <target fragment="Standard" name="PackageMerge"/>
           <opposite name="MergedPackage"/>
@@ -3552,10 +3445,6 @@
         <attribute name="IsException" type="java.lang.Boolean"></attribute>
         <attribute name="IsStream" type="java.lang.Boolean"></attribute>
         <attribute name="Effect" type="java.lang.Enum" enumType="org.modelio.metamodel.uml.behavior.commonBehaviors.ParameterEffectKind"></attribute>
-        <dependency name="BpmnRepresentingDataInput" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnDataInput"/>
-          <opposite name="RepresentedParameter"/>
-        </dependency>
         <dependency name="Type" min="0" max="1" navigate="true">
           <target fragment="Standard" name="GeneralClass"/>
           <opposite name="Occurence"/>
@@ -3567,10 +3456,6 @@
         <dependency name="Matching" min="0" max="-1" navigate="false" cascadeDelete="true">
           <target fragment="Standard" name="Pin"/>
           <opposite name="Matched"/>
-        </dependency>
-        <dependency name="BpmnRepresentingDataOutput" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnDataOutput"/>
-          <opposite name="RepresentedParameter"/>
         </dependency>
         <dependency name="SRepresentation" min="0" max="-1" navigate="false">
           <target fragment="Standard" name="Signal"/>
@@ -3759,10 +3644,6 @@
           <target fragment="Standard" name="ExitPointPseudoState"/>
           <opposite name="ExitOf"/>
         </dependency>
-        <dependency name="BpmnDataStateRefs" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnDataState"/>
-          <opposite name="UmlState"/>
-        </dependency>
         <dependency name="Deffered" min="0" max="-1" navigate="true">
           <target fragment="Standard" name="Event"/>
           <opposite name="Origin"/>
@@ -3779,10 +3660,6 @@
           <target fragment="Standard" name="Region"/>
           <opposite name="Parent"/>
         </dependency>
-        <dependency name="RequiredStateOfBpmnMessage" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnMessage"/>
-          <opposite name="InState"/>
-        </dependency>
         <dependency name="RequiredStateOf" min="0" max="-1" navigate="false">
           <target fragment="Standard" name="ObjectNode"/>
           <opposite name="InState"/>
@@ -3794,10 +3671,6 @@
         <dependency name="SubMachine" min="0" max="1" navigate="true">
           <target fragment="Standard" name="StateMachine"/>
           <opposite name="SubmachineState"/>
-        </dependency>
-        <dependency name="RequiredStateOfBpmnItem" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnItemAwareElement"/>
-          <opposite name="InState"/>
         </dependency>
       </metaclass>
       <metaclass name="StateInvariant" version="0.0.9054">
@@ -4009,10 +3882,6 @@
         <dependency name="TemplateSubstitution" min="0" max="-1" navigate="false">
           <target fragment="Standard" name="TemplateParameterSubstitution"/>
           <opposite name="Actual"/>
-        </dependency>
-        <dependency name="BpmnLaneRefs" min="0" max="-1" navigate="false">
-          <target fragment="Standard" name="BpmnLane"/>
-          <opposite name="PartitionElement"/>
         </dependency>
         <dependency name="DefaultParametering" min="0" max="-1" navigate="false">
           <target fragment="Standard" name="TemplateParameter"/>

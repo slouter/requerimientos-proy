@@ -7,6 +7,7 @@
       <ATT name="Image"></ATT>
       <ATT name="Icon"></ATT>
       <ATT name="IsHidden">true</ATT>
+      <ATT name="IsAbstract">false</ATT>
       <ATT name="LabelKey"><![CDATA[%stereotype.test_diagram.label]]></ATT>
       <ATT name="BaseClassName"><![CDATA[Standard.StaticDiagram]]></ATT>
       <ATT name="Name"><![CDATA[test_diagram]]></ATT>

@@ -7,6 +7,7 @@
       <ATT name="Image"></ATT>
       <ATT name="Icon"></ATT>
       <ATT name="IsHidden">true</ATT>
+      <ATT name="IsAbstract">false</ATT>
       <ATT name="LabelKey"><![CDATA[%stereotype.UML2Body.label]]></ATT>
       <ATT name="BaseClassName"><![CDATA[Standard.ActivityNode]]></ATT>
       <ATT name="Name"><![CDATA[UML2Body]]></ATT>

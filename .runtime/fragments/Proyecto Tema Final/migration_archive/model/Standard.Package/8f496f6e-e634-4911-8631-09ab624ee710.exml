@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Casos de Uso de negocio" version="4">
+  <OBJECT>
+    <ID name="Casos de Uso de negocio" mc="Standard.Package" uid="8f496f6e-e634-4911-8631-09ab624ee710"/>
+    <PID name="Modelo de casos de uso del Negocio" mc="Standard.Package" uid="8a70cbcb-0870-499c-82a1-cafddfbf99ed"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Casos de Uso de negocio]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Generar Venta de pasaje" mc="Standard.UseCase" uid="c5f61a14-171b-4808-a721-3f70a88a44bd"/>
+        <COMPID name="Generar  Reserva de Pasaje" mc="Standard.UseCase" uid="eee08c08-e6e2-40f1-bf69-16aed57ea1b0"/>
+        <COMPID name="Gestion de Ventas" mc="Standard.UseCase" uid="a8ed25f2-6aa1-464f-872b-0bccca1d74dd"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

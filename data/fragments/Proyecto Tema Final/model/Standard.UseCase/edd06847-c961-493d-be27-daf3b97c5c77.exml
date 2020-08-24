@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Mantinimiento de buses" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Gestion de mantenimiento" version="4">
   <OBJECT>
-    <ID name="Mantinimiento de buses" mc="Standard.UseCase" uid="edd06847-c961-493d-be27-daf3b97c5c77"/>
+    <ID name="Gestion de mantenimiento" mc="Standard.UseCase" uid="edd06847-c961-493d-be27-daf3b97c5c77"/>
     <PID name="Modelo de casos de uso del Negocio" mc="Standard.Package" uid="8a70cbcb-0870-499c-82a1-cafddfbf99ed"/>
     <ATTRIBUTES>
       <ATT name="IsElementary">false</ATT>
@@ -9,7 +9,7 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[Mantinimiento de buses]]></ATT>
+      <ATT name="Name"><![CDATA[Gestion de mantenimiento]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>

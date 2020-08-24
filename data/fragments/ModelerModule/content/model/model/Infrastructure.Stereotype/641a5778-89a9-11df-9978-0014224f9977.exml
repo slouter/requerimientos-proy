@@ -4,9 +4,10 @@
     <ID name="Pattern" mc="Infrastructure.Stereotype" uid="641a5778-89a9-11df-9978-0014224f9977"/>
     <PID name="TemplateProfile" mc="Infrastructure.Profile" uid="d7ea54fa-8913-11df-8dda-0014224f9977"/>
     <ATTRIBUTES>
-      <ATT name="Image"><![CDATA[res/bmp/template16.png]]></ATT>
-      <ATT name="Icon"><![CDATA[res/bmp/template16.png]]></ATT>
+      <ATT name="Image"></ATT>
+      <ATT name="Icon"><![CDATA[res/icon/pattern.png]]></ATT>
       <ATT name="IsHidden">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
       <ATT name="LabelKey"><![CDATA[%stereotype.Pattern.label]]></ATT>
       <ATT name="BaseClassName"><![CDATA[Standard.Package]]></ATT>
       <ATT name="Name"><![CDATA[Pattern]]></ATT>

@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Trabajadores de negocio" version="4">
+  <OBJECT>
+    <ID name="Trabajadores de negocio" mc="Standard.Package" uid="9f6c730a-b544-43cc-92be-44c89d8e282a"/>
+    <PID name="Modelo de Analisis de Negocio" mc="Standard.Package" uid="34201061-f1fd-46b5-9a7a-a8e4a881ae47"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Trabajadores de negocio]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

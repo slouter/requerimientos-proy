@@ -70,7 +70,7 @@
           <ID name="usecase" mc="Infrastructure.ResourceType" uid="85571022-1c36-11e1-90cd-002564c97631"/>
           <ATTRIBUTES>
             <ATT name="IsHidden">true</ATT>
-            <ATT name="LabelKey"><![CDATA[%externdocumenttype.usecase.label]]></ATT>
+            <ATT name="LabelKey"><![CDATA[%documenttype.usecase.label]]></ATT>
             <ATT name="Icon"></ATT>
             <ATT name="Image"></ATT>
             <ATT name="Name"><![CDATA[usecase]]></ATT>

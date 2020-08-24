@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Cajera" version="4">
+  <OBJECT>
+    <ID name="Cajera" mc="Standard.Actor" uid="8e30dcee-0401-4a1a-9dc2-6136966cfff3"/>
+    <PID name="Trabajadores de negocio" mc="Standard.Package" uid="9f6c730a-b544-43cc-92be-44c89d8e282a"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Cajera]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

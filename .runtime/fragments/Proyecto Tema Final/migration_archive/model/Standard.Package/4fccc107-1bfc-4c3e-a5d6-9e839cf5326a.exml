@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Realizaciones del negocio" version="4">
+  <OBJECT>
+    <ID name="Realizaciones del negocio" mc="Standard.Package" uid="4fccc107-1bfc-4c3e-a5d6-9e839cf5326a"/>
+    <PID name="Modelo de Analisis de Negocio" mc="Standard.Package" uid="34201061-f1fd-46b5-9a7a-a8e4a881ae47"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Realizaciones del negocio]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

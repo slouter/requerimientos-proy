@@ -7,6 +7,7 @@
       <ATT name="Image"></ATT>
       <ATT name="Icon"></ATT>
       <ATT name="IsHidden">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
       <ATT name="LabelKey"><![CDATA[%stereotype.topLevel.label]]></ATT>
       <ATT name="BaseClassName"><![CDATA[Standard.Package]]></ATT>
       <ATT name="Name"><![CDATA[topLevel]]></ATT>

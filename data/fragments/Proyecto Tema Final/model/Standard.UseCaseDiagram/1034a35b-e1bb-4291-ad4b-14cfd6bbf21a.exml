@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="diagrama de clases" version="4">
+  <OBJECT>
+    <ID name="diagrama de clases" mc="Standard.UseCaseDiagram" uid="1034a35b-e1bb-4291-ad4b-14cfd6bbf21a"/>
+    <PID name="RN_Generar venta de pasaje" mc="Standard.UseCase" uid="94235eb9-cde4-4e06-ab49-10339d34692f"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">1</ATT>
+      <ATT name="UiData"><![CDATA[eJztVl1v2jAU/StWtFcMATZpE1CFJGIRaVIltFOfkIMvLJ1jI9u05N/XKdCVTLBsQuvLnmLd3HPu1/FNBlfbgqFHkCoXfGjZuGOhq9Egzh5goVFOjclCulzD0BJyhQtBgeUC05ysJCkw0FwLiTcKFkQBBgYFcK0OhoPbpLhV4BqDtzNYqCAPQs5f43as0eBGijVIXSJOChOOkVJstEc0Me/uCNvAPg++YcxqjwbtA+AXaKpLBtZRFd1zVajKX+GFkIB32Ab5mXIWhAI9BPO3OoFlwyiRodgjEWy1lwUmx5djdbjeIVEPb88X6qRp7M7Tr/E310m8Wp/GQjAg3EKPlXFoLQlT0JQviUM/vSRh5NwFE2cchMHs/lK8bhxFvjsL4iiJb2d+UuP1+ab40mjeUyg/uIJzoxYz7sToDmRAXxPygsSEaVpp6Iz98C9KbO/kei6IBEY0UKOzGv91ZTqQp5pwSiTFx5cO2Z1en/Q+Zi2ws6zV7362W4T2s5bdXyzppyxbdm1yvkhGlJ5y8cRDkgGr5ZBqmfOVNdp3mSAKaGEQoAbtF7+zlZn+BNwVxVqovBrCCfIGVO73nFEJFUOYq6qf+8dJRJjzH6q5+3jlSfJk0glJCfJ4z/TObsvDeqQ7vMKsYjDr8Yjw3yzHP0O9t/JyekIQ3gSHzr2fzMeOO52YPRB5l9FIg+v4dmo/9fNGDf3/angnNczim0vL4Hdrof6Tg/cjq6UacA2raq77LtknPgPP4OdVVg==]]></ATT>
+      <ATT name="PreviewData"><![CDATA[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAIAAAAmdTLBAAAAGElEQVR4nGP4TxlgGNU/qn9U/6j+EaofAB8cJiE1IQRUAAAAAElFTkSuQmCC]]></ATT>
+      <ATT name="Name"><![CDATA[diagrama de clases]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="2314d953-d152-43fc-b1ad-bac158694925"/>
+          <ATTRIBUTES>
+            <ATT name="Content"></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

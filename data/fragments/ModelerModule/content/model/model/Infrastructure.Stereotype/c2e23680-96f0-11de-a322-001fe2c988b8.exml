@@ -5,8 +5,9 @@
     <PID name="default" mc="Infrastructure.Profile" uid="007004e8-0000-0282-0000-000000000000"/>
     <ATTRIBUTES>
       <ATT name="Image"></ATT>
-      <ATT name="Icon"><![CDATA[res/bmp/externalDocument.png]]></ATT>
+      <ATT name="Icon"><![CDATA[res/icon/externalDocument.png]]></ATT>
       <ATT name="IsHidden">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
       <ATT name="LabelKey"><![CDATA[%stereotype.ExternalDocument.label]]></ATT>
       <ATT name="BaseClassName"><![CDATA[Infrastructure.Note]]></ATT>
       <ATT name="Name"><![CDATA[ExternalDocument]]></ATT>

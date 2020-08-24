@@ -4,9 +4,10 @@
     <ID name="file" mc="Infrastructure.Stereotype" uid="0226fd5c-caf5-4cb4-b25c-06e493b37b2d"/>
     <PID name="default" mc="Infrastructure.Profile" uid="007004e8-0000-0282-0000-000000000000"/>
     <ATTRIBUTES>
-      <ATT name="Image"><![CDATA[res/bmp/file32.png]]></ATT>
-      <ATT name="Icon"><![CDATA[res/bmp/file.png]]></ATT>
+      <ATT name="Image"><![CDATA[res/images/file48x48.png]]></ATT>
+      <ATT name="Icon"><![CDATA[res/icon/file.png]]></ATT>
       <ATT name="IsHidden">true</ATT>
+      <ATT name="IsAbstract">false</ATT>
       <ATT name="LabelKey"><![CDATA[%stereotype.file.label]]></ATT>
       <ATT name="BaseClassName"><![CDATA[Standard.Artifact]]></ATT>
       <ATT name="Name"><![CDATA[file]]></ATT>
