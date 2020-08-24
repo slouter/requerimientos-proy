@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Diagrama de entidades" version="4">
+  <OBJECT>
+    <ID name="Diagrama de entidades" mc="Standard.ClassDiagram" uid="f88ad8b2-3957-4298-924c-f9ded71ac4a2"/>
+    <PID name="Entidades del negocio" mc="Standard.Package" uid="225d80d3-cdff-4b7f-914b-fc9df6fce797"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">5</ATT>
+      <ATT name="UiData"><![CDATA[eJztmm1T4joUx79Kh7lvW+kDhV5ZdxQYLyMKA+jM7hsmNAGztg2ThBX89DcpFLUqlFKL4/QdCe3J0++fc06a+s+F7yl/EWWYBD9KulYuKT/P6t3xH+RyBUNRVVL4coZ+lAidaj6ByMNEgxhMKfA1BDEnVGMccPygIQ/5KOBsVXajhy79QVhursolxQd/CB1tGi2Xzuo9SmaI8qUSAF+05YElmfMm4ED8dwe8OVp3Iph7XunkrH4SvfDm1QFfeqj0agjGtiEw+TzTXEKRtno3Qf8agLkAIhg11lrwPpokbOVGmFi/qaAFb47boo/hT/njevWmYmqL2EBPVkPaNniKPMARFH2Jzdu1rFL+yho5RSCAgEKt4QHG1suiTGo1AGtjQzWdSlW1DKemOoblqhNHDLSqA9cCxvapF9b4VUAegw4YIy/WgwGnOJiWztbNAQUiRcCCoZhHVj8JH906NOKhdtAg/owwzMXCfGA/ganGPfYgRdJCBzP+ihUzBe6uB56eBObhdB6Ed190AwRTScZ6rYyyeeqYp7pROa1V9ybf+nTyJfYrjW3tW6NzPhiM+q1evzUYXXebrdjAW8Hc/zdRJ6/Q8p8+mlHExNwDCYJUzDPbw/5tY3jbbzWTdOh8OBxd9ru3vbv2oH3RiffqggjoQLAxzukc5SNKZQJtA9rAUnXbslVrgmoqsG1btU0TmY5hOmVoZaDGlj8TI4Tk6wiwcqgAexT7gC5vQioy1WL5tJxWiHZSIQpTi+XBaoyjUVAaN3kNcCAROZDWagpapVU2Ay66F2NCVHB7E9X8F9bkHyHV8sXTLvDcgecKhAQG2T15HGH3jaG465oAj8V913umHtDykVCYgTUO3IcR44gisr9bfa9r3jtLsL8pMGacApenGOEG0xfKcdK5K8bwBIfab2wKfcTwExh76JKS+Sz/TUAvF7vA19oFDnROeprcHXDR+HjO0VRSKAA9jyoOx7IdCLPSv0XJjbk/pImT+WwgFaIoKN1O6WtADmU2TQK+YfYlrpmSqur7k5o4+c6I1HgKnj2pm7lVLKMKTMd2VAQqULXKAtSabumqrk8qTmVcrlbscQa0YpjvbvodoqmkfUsZTj1TtdLujvhIT5PPS4Ph0U7kg7pRxbFCo5zz98Lr7E7gEb8nMLXLSUhvmvweC99BA6FCoR6Xz6n0Su113SCqOwLDOSf5BcM7GY6oODRmSpOEJqL0SNutkXMmKqTxrVDNENFP3mCNNClqInR/k+AIm6yRd3r6zcj9hE1WgpAxwAnZTpPK4iBANDwgDKEWhcO/KseTWWv/ZNbIO5ktgofdwUOQ6AvBtsjBSJOdfYDosWKFnFMzo/i2euyYIV1S9i60iB0pTsg5GSuo/WJxwtu/Yu1gdidK2AXZntHFWnl7Z0Zb47Ujhoh/uXlXqKnyUh9M0eaKRHhIKRUra+U1iYGsXZGRaUi0t4LNnHPUQsC7BDwQg/U8zJOouDjoz+Sgf+f+0sHBA9uyVcYev5g2KXgUq9kBS6HO14LbflQQ7R9wZYBpnjQhto5XFvNx9Pu9ddxL2zgO7eai9qXWOf/V6o8uzhtX8pLsTTNr9/ihlZdr9ozPSxi2nrMUMHwaDMNuL7cg6X+ry7WY]]></ATT>
+      <ATT name="PreviewData"><![CDATA[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJEAAABrCAIAAAD4s/cLAAACTklEQVR4nO3ca04TURiA4dmkG3IRrsY1+EfF+w0QFRDLrUCvdubMN0yBSEtr26PPlzfkMKENyZMzM5k0LcYmtynW/Q+YuYdZfsMsv2GW3zDLb5jlN8zyG2b5DbP85h6zJ48facUtwazXeV53/KLqZbSV6p+8qnodvSk7Tb1t9a7s7H30oepjanD+qepz9KWuu121E+2WXXyN9qJvk4aX36Mf0X6rg+iw7upn1VH0q6zXiY6jk0mj/ml0VnVeN+hWXbS6LBumrqLepPGoHw2iYdl4lGLGjNlKzLaePWXGjBmzScWtebBZevmDzeqXM5vRbCn7jNk6zeqD3e3rzdfdqRcVWKz3YnHTrL1xG7Opg2EWv06ZTf0ls9nNbrHtNmzXB4Otbdai2o/1QfqZNlnDFoujllAnFuU+S2tm91/PGrDGLJ0bb5ilc+OMZndutcasvc+YLXRuXMRsiqcFduc+Y7YRZjfuQRowZus0K+a8nv3BrHlDZn/9ehaLue8bi/rW0X3jqp6DNGaegzBj5nkjM2bMmDHbBDOtOPvsv9xnzJgxY8aMGTNmzJgxY8aMGTNmzJgxY8aMGbN/xawoisasWjPbeDP7jBkzZsyYMWPGjNnYZ+V8Vs4+c25kxowZM2bMmDFjxowZM2bMmDFjxowZM2bMmDFjxowZM2bMmDFjxowZM2bMmDFjxowZM2bMmDFjxowZM2bMmDFjxowZM2bMmDFj5jtd8m5Rs2Ymb6SVtRwzsznDLL9hlt8wy2+Y5TfM8htm+Q2z/IZZfsMsv/kNypzrLNw5+ZMAAAAASUVORK5CYII=]]></ATT>
+      <ATT name="Name"><![CDATA[Diagrama de entidades]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Represented">
+        <ID name="Empleado" mc="Standard.Class" uid="fd62d6a4-1646-4fe8-a666-633e392390d4"/>
+        <REFOBJ>
+          <ID name="id" mc="Standard.Attribute" uid="427a3969-ea5d-4066-8141-11f595b0756b"/>
+        </REFOBJ>
+      </LINK>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="51148bc9-3929-4063-9c37-428871568d4a"/>
+          <ATTRIBUTES>
+            <ATT name="Content"></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

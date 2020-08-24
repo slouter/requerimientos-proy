@@ -625,6 +625,50 @@
           <opposite name="GoalRoot"/>
         </dependency>
       </metaclass>
+      <metaclass name="KPI" version="0.0.00" cmsNode="true" fake="true">
+        <parent fragment="Analyst" name="AnalystElement"/>
+        <attribute name="Name" type="java.lang.String"></attribute>
+        <dependency name="SubKPI" min="0" max="-1" aggregation="Composition" navigate="true">
+          <target fragment="Analyst" name="KPI"/>
+          <opposite name="ParentKPI"/>
+        </dependency>
+        <dependency name="OwnerContainer" min="0" max="1" navigate="false">
+          <target fragment="Analyst" name="KPIContainer"/>
+          <opposite name="OwnedKPI"/>
+        </dependency>
+        <dependency name="ParentKPI" min="0" max="1" navigate="false">
+          <target fragment="Analyst" name="KPI"/>
+          <opposite name="SubKPI"/>
+        </dependency>
+        <dependency name="ArchivedKPIVersion" min="0" max="-1" aggregation="Composition" navigate="true">
+          <target fragment="Analyst" name="KPI"/>
+          <opposite name="LastKPIVersion"/>
+        </dependency>
+        <dependency name="LastKPIVersion" min="0" max="1" navigate="false">
+          <target fragment="Analyst" name="KPI"/>
+          <opposite name="ArchivedKPIVersion"/>
+        </dependency>
+      </metaclass>
+      <metaclass name="KPIContainer" version="0.0.00" cmsNode="true" fake="true">
+        <parent fragment="Analyst" name="AnalystContainer"/>
+        <attribute name="Name" type="java.lang.String"></attribute>
+        <dependency name="OwnedKPI" min="0" max="-1" aggregation="Composition" navigate="true">
+          <target fragment="Analyst" name="KPI"/>
+          <opposite name="OwnerContainer"/>
+        </dependency>
+        <dependency name="OwnerContainer" min="0" max="1" navigate="false">
+          <target fragment="Analyst" name="KPIContainer"/>
+          <opposite name="OwnedContainer"/>
+        </dependency>
+        <dependency name="OwnedContainer" min="0" max="-1" aggregation="Composition" navigate="true">
+          <target fragment="Analyst" name="KPIContainer"/>
+          <opposite name="OwnerContainer"/>
+        </dependency>
+        <dependency name="OwnerProject" min="0" max="1" navigate="false">
+          <target fragment="Analyst" name="AnalystProject"/>
+          <opposite name="KPIRoot"/>
+        </dependency>
+      </metaclass>
       <metaclass name="Requirement" version="0.0.00" cmsNode="true" fake="true">
         <parent fragment="Analyst" name="AnalystElement"/>
         <attribute name="Name" type="java.lang.String"></attribute>
@@ -771,50 +815,6 @@
         <dependency name="OwnerProject" min="0" max="1" navigate="false">
           <target fragment="Analyst" name="AnalystProject"/>
           <opposite name="TestRoot"/>
-        </dependency>
-      </metaclass>
-      <metaclass name="KPI" version="0.0.00" cmsNode="true" fake="true">
-        <parent fragment="Analyst" name="AnalystElement"/>
-        <attribute name="Name" type="java.lang.String"></attribute>
-        <dependency name="SubKPI" min="0" max="-1" aggregation="Composition" navigate="true">
-          <target fragment="Analyst" name="KPI"/>
-          <opposite name="ParentKPI"/>
-        </dependency>
-        <dependency name="OwnerContainer" min="0" max="1" navigate="false">
-          <target fragment="Analyst" name="KPIContainer"/>
-          <opposite name="OwnedKPI"/>
-        </dependency>
-        <dependency name="ParentKPI" min="0" max="1" navigate="false">
-          <target fragment="Analyst" name="KPI"/>
-          <opposite name="SubKPI"/>
-        </dependency>
-        <dependency name="ArchivedKPIVersion" min="0" max="-1" aggregation="Composition" navigate="true">
-          <target fragment="Analyst" name="KPI"/>
-          <opposite name="LastKPIVersion"/>
-        </dependency>
-        <dependency name="LastKPIVersion" min="0" max="1" navigate="false">
-          <target fragment="Analyst" name="KPI"/>
-          <opposite name="ArchivedKPIVersion"/>
-        </dependency>
-      </metaclass>
-      <metaclass name="KPIContainer" version="0.0.00" cmsNode="true" fake="true">
-        <parent fragment="Analyst" name="AnalystContainer"/>
-        <attribute name="Name" type="java.lang.String"></attribute>
-        <dependency name="OwnedKPI" min="0" max="-1" aggregation="Composition" navigate="true">
-          <target fragment="Analyst" name="KPI"/>
-          <opposite name="OwnerContainer"/>
-        </dependency>
-        <dependency name="OwnerContainer" min="0" max="1" navigate="false">
-          <target fragment="Analyst" name="KPIContainer"/>
-          <opposite name="OwnedContainer"/>
-        </dependency>
-        <dependency name="OwnedContainer" min="0" max="-1" aggregation="Composition" navigate="true">
-          <target fragment="Analyst" name="KPIContainer"/>
-          <opposite name="OwnerContainer"/>
-        </dependency>
-        <dependency name="OwnerProject" min="0" max="1" navigate="false">
-          <target fragment="Analyst" name="AnalystProject"/>
-          <opposite name="KPIRoot"/>
         </dependency>
       </metaclass>
     </metaclasses>
@@ -1481,6 +1481,10 @@
         <parent fragment="Archimate" name="ExternalActiveStructureElement"/>
         <attribute name="Name" type="java.lang.String"></attribute>
       </metaclass>
+      <metaclass name="ApplicationInternalActiveStructureElement" version="0.0.00" fake="true">
+        <parent fragment="Archimate" name="InternalActiveStructureElement"/>
+        <attribute name="Name" type="java.lang.String"></attribute>
+      </metaclass>
       <metaclass name="ApplicationInternalBehaviorElement" version="0.0.00" cmsNode="true" fake="true">
         <parent fragment="Archimate" name="InternalBehaviorElement"/>
         <attribute name="Name" type="java.lang.String"></attribute>
@@ -1903,6 +1907,10 @@
         <parent fragment="Archimate" name="ActiveStructureElement"/>
         <attribute name="Name" type="java.lang.String"></attribute>
       </metaclass>
+      <metaclass name="StrategyBehaviorElement" version="0.0.00" cmsNode="true" fake="true">
+        <parent fragment="Archimate" name="BehaviorElement"/>
+        <attribute name="Name" type="java.lang.String"></attribute>
+      </metaclass>
       <metaclass name="StrategyFolder" version="0.0.00" cmsNode="true" fake="true">
         <parent fragment="Archimate" name="Folder"/>
         <attribute name="Name" type="java.lang.String"></attribute>
@@ -1925,6 +1933,10 @@
       </metaclass>
       <metaclass name="SystemSoftware" version="0.0.00" cmsNode="true" fake="true">
         <parent fragment="Archimate" name="Node"/>
+        <attribute name="Name" type="java.lang.String"></attribute>
+      </metaclass>
+      <metaclass name="TechnologyActiveStructureElement" version="0.0.00" fake="true">
+        <parent fragment="Archimate" name="ActiveStructureElement"/>
         <attribute name="Name" type="java.lang.String"></attribute>
       </metaclass>
       <metaclass name="TechnologyCollaboration" version="0.0.00" cmsNode="true" fake="true">
@@ -1959,6 +1971,10 @@
         <parent fragment="Archimate" name="ExternalActiveStructureElement"/>
         <attribute name="Name" type="java.lang.String"></attribute>
       </metaclass>
+      <metaclass name="TechnologyInternalActiveStructureElement" version="0.0.00" fake="true">
+        <parent fragment="Archimate" name="TechnologyActiveStructureElement"/>
+        <attribute name="Name" type="java.lang.String"></attribute>
+      </metaclass>
       <metaclass name="TechnologyInternalBehaviorElement" version="0.0.00" fake="true">
         <parent fragment="Archimate" name="InternalBehaviorElement"/>
         <attribute name="Name" type="java.lang.String"></attribute>
@@ -1981,6 +1997,10 @@
       </metaclass>
       <metaclass name="Value" version="0.0.00" cmsNode="true" fake="true">
         <parent fragment="Archimate" name="MotivationElement"/>
+        <attribute name="Name" type="java.lang.String"></attribute>
+      </metaclass>
+      <metaclass name="ValueStream" version="0.0.00" cmsNode="true" fake="true">
+        <parent fragment="Archimate" name="StrategyBehaviorElement"/>
         <attribute name="Name" type="java.lang.String"></attribute>
       </metaclass>
       <metaclass name="ViewPoint" version="0.0.00" cmsNode="true" fake="true">
@@ -2009,26 +2029,6 @@
       </metaclass>
       <metaclass name="WorkPackage" version="0.0.00" cmsNode="true" fake="true">
         <parent fragment="Archimate" name="BehaviorElement"/>
-        <attribute name="Name" type="java.lang.String"></attribute>
-      </metaclass>
-      <metaclass name="ApplicationInternalActiveStructureElement" version="0.0.00" fake="true">
-        <parent fragment="Archimate" name="InternalActiveStructureElement"/>
-        <attribute name="Name" type="java.lang.String"></attribute>
-      </metaclass>
-      <metaclass name="StrategyBehaviorElement" version="0.0.00" cmsNode="true" fake="true">
-        <parent fragment="Archimate" name="BehaviorElement"/>
-        <attribute name="Name" type="java.lang.String"></attribute>
-      </metaclass>
-      <metaclass name="TechnologyActiveStructureElement" version="0.0.00" fake="true">
-        <parent fragment="Archimate" name="ActiveStructureElement"/>
-        <attribute name="Name" type="java.lang.String"></attribute>
-      </metaclass>
-      <metaclass name="TechnologyInternalActiveStructureElement" version="0.0.00" fake="true">
-        <parent fragment="Archimate" name="TechnologyActiveStructureElement"/>
-        <attribute name="Name" type="java.lang.String"></attribute>
-      </metaclass>
-      <metaclass name="ValueStream" version="0.0.00" cmsNode="true" fake="true">
-        <parent fragment="Archimate" name="StrategyBehaviorElement"/>
         <attribute name="Name" type="java.lang.String"></attribute>
       </metaclass>
     </metaclasses>

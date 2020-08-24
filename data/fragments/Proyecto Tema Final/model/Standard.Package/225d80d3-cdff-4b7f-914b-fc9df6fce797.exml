@@ -23,6 +23,9 @@
         <COMPID name="Equipaje" mc="Standard.Class" uid="9c615738-e8a2-4572-a4b9-59ccf6c22801"/>
         <COMPID name="Ticket" mc="Standard.Class" uid="f63c508e-88f8-42a3-b407-9c95de35b189"/>
       </COMP>
+      <COMP relation="Product">
+        <COMPID name="Diagrama de entidades" mc="Standard.ClassDiagram" uid="f88ad8b2-3957-4298-924c-f9ded71ac4a2"/>
+      </COMP>
     </DEPENDENCIES>
   </OBJECT>
 </EXT>
