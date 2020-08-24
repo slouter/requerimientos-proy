@@ -19,6 +19,7 @@
         <COMPID name="Generar Reclamos" mc="Standard.UseCase" uid="55ec9587-1def-4fdc-8d8e-e2305e97a895"/>
         <COMPID name="Gestion de mantenimiento" mc="Standard.UseCase" uid="edd06847-c961-493d-be27-daf3b97c5c77"/>
         <COMPID name="Solicitud cambio de fecha de viaje" mc="Standard.UseCase" uid="76fff96f-94b3-4d09-bcf1-d2471c74940a"/>
+        <COMPID name="Generar Venta de pasaje Web" mc="Standard.UseCase" uid="aea04887-26ee-4c51-a1fe-75f626eb3618"/>
       </COMP>
       <COMP relation="Product">
         <COMPID name="Diagrama general de casos de uso del negocio" mc="Standard.UseCaseDiagram" uid="c1b881cc-ee5c-4487-84a3-2bebdfac23f1"/>
