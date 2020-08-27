@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="gitkeep" version="4">
+  <OBJECT>
+    <ID name="gitkeep" mc="Standard.ClassDiagram" uid="7f9453ae-8fec-40ce-8b54-30f8d24c74a0"/>
+    <PID name="Modelo de casos de Uso" mc="Standard.Package" uid="ed6531b7-a840-4400-a3a2-474b9dbc85f7"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">1</ATT>
+      <ATT name="UiData"><![CDATA[eJztU01P4zAQ/SuW73UDDYKV0iJIUIUIFLW7SJzQNJ5mTR27sl1o/j1O0+7SokZBQstlTx7P+L358JvofFVI8oLGCq369IgFlJwPotH0GTNHBPcuSly5wD7VJmeF5iiFZlxAbqBgyIXThlkHTswZSixQOVvfs+2jYTFZ35P6TkkBz9o8/Uka0EF0b/QCjSuJgsLnklDqpUvAgY89gFzipgi1lJJ2B1F3C/gAnbhSIt1p4bipBVu9tyzTBlmNbVFfDDYDjnyb7GrlxjhrmeXOU2yQBFcumV77GtdmZdzWSNJjq71Gu3VLTc0blOCQ+1r25nZbuchL5alGBIqD4SyWYO3mW8jp7Ed40gPsnM0w64RB5q3pSdjpBbMzfhxmpyEEzaP3bO5G6VeVwhTlXgUTZ4TK6SAXbo64iLrrYGMzWuK1inWx0FY4/xUHGFtQxb+F5AYrhlTYaoSb4yAiFWpu2z+/zBMDr76cFEo0u/LrNW7Qdmd4jbdMVgx+aXYI/83OfA71vWIT/IAckiFLLx6vxk+XF/HNcDz6dZd8jUJa7N/7P/urnndaCP9r4Vu08HN0/9UiOBh6A5GTjZo=]]></ATT>
+      <ATT name="Name"><![CDATA[gitkeep]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="3a41f0b3-1ba3-42fb-99d7-f3723a8f53cb"/>
+          <ATTRIBUTES>
+            <ATT name="Content"></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

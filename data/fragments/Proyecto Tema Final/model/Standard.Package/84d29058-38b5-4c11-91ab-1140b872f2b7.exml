@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Generar reserva de pasaje" version="4">
+  <OBJECT>
+    <ID name="Generar reserva de pasaje" mc="Standard.Package" uid="84d29058-38b5-4c11-91ab-1140b872f2b7"/>
+    <PID name="Realizaciones del negocio" mc="Standard.Package" uid="4fccc107-1bfc-4c3e-a5d6-9e839cf5326a"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Generar reserva de pasaje]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="DependsOnDependency">
+        <OBJECT>
+          <ID name="" mc="Standard.ElementRealization" uid="5c44ef68-6af8-4b27-8990-2624e0301076"/>
+          <ATTRIBUTES>
+            <ATT name="Mapping"></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="DependsOn">
+              <ID name="RN_Generar reserva de pasaje" mc="Standard.UseCase" uid="620adc8e-8f2e-4f2c-9faa-0d7ea5fdb25e"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

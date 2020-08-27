@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="diagrama de clases" version="4">
+  <OBJECT>
+    <ID name="diagrama de clases" mc="Standard.UseCaseDiagram" uid="1034a35b-e1bb-4291-ad4b-14cfd6bbf21a"/>
+    <PID name="RN_Generar venta de pasaje" mc="Standard.UseCase" uid="94235eb9-cde4-4e06-ab49-10339d34692f"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">2</ATT>
+      <ATT name="UiData"><![CDATA[eJztV21T2kAQ/iuZTL8SiKCtHcSBJKUZI3EC2rFfmEtuwejljrk7hPz7Xgg4EhVTpNh2/MTN3u2zb8/uhubpPCHaPXARM3qim0ZN105bTT+8hUhqMVYiXZPpBE50xsdGwjCQmBk4RmOOEgNwLBk3pgIiJMAAAglQKVaC1bNucinAUgI7F+hagm4ZHz7Yremt5gVnE+Ay1ShKlDmCUjaVNpJI3V0hMoWlH3RKiF5tNasrhSeqfZkS0NeiONgUhcjeCyNiHIxct4R/KpwIYcArY85cBjAqaaWnIJaaGsylHbrKx8UxO5znmlrdmG8OtN3v+9aw/93/YbUDu5CnDmMEENW1+0x4oo8QEVAWL/A9p79LwF77yu22O67nDq53hWv5vZ5jDVy/F/iXAyco4Dp0mnwtVe8zSD9ZjFLFFlXuQPEOuIsfHLLdQJkpG6nX7jjeFiFWc7puMsKBIAlY8ayAf56JVuB9iShGHBvrTaeZtXoD1Q/DCphhWGkcHJsVhBthxWxEI3wUhqMDE20OkiAhzyibUQ+FQAo+9CWP6VhvLbOMNAxapDRANKuLdxsjU/lxqcWSCRNxVoQXwEtAWTcxwRwyBC8Wcm0M1LcZZiIVErIh1l8c9j+8Gn98eGWTKx+T/ycng96wCxQ44mrXUbng5gQJdAt/DzcPN3JzRcaIJQmjxg2o8nHFSRtGaErkYmU4+aPvi7v90/SoLE0V1Dx9M1cbH1zdnqs5f0oAihs2G8bRE6AtlvYC6g7SGeN4B2gSRXdDNZA5sFfQJJ+WcY08U5QSUA+8e9QKn3ewZ75xgJ+MluqR3Tbyl49G/mcaOWQ43WbxVJc/z6X9yVUBbMVQY1ntgmsulTDOFtCyDOaL9X3NkBfTO7HB5cLzztjmaKbS4qFU2V/j9HGp7YpzfWGQDCFbr48B99OIv6f13p0QF0f5iph21/Da104w7LSts676g9azd83TF1EeV008961l1j7o8E50GPgX+59X63G+cW79AsPltok=]]></ATT>
+      <ATT name="PreviewData"><![CDATA[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAIAAAAmdTLBAAAAGElEQVR4nGP4TxlgGNU/qn9U/6j+EaofAB8cJiE1IQRUAAAAAElFTkSuQmCC]]></ATT>
+      <ATT name="Name"><![CDATA[diagrama de clases]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Represented">
+        <ID name="RN_Generar venta de pasaje" mc="Standard.UseCase" uid="94235eb9-cde4-4e06-ab49-10339d34692f"/>
+      </LINK>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="2314d953-d152-43fc-b1ad-bac158694925"/>
+          <ATTRIBUTES>
+            <ATT name="Content"></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

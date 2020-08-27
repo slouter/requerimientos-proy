@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Trabajadores de negocio" version="4">
+  <OBJECT>
+    <ID name="Trabajadores de negocio" mc="Standard.Package" uid="9f6c730a-b544-43cc-92be-44c89d8e282a"/>
+    <PID name="Modelo de Analisis de Negocio" mc="Standard.Package" uid="34201061-f1fd-46b5-9a7a-a8e4a881ae47"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Trabajadores de negocio]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Cajera" mc="Standard.Actor" uid="8e30dcee-0401-4a1a-9dc2-6136966cfff3"/>
+        <COMPID name="Conductor" mc="Standard.Actor" uid="0e0c36c6-cf5e-4bf3-9b37-716b6ce44032"/>
+        <COMPID name="Embarcador" mc="Standard.Actor" uid="a0583463-a530-4ac0-be47-f00c259816b0"/>
+        <COMPID name="Estibador" mc="Standard.Actor" uid="0e6727a1-7eec-4718-8a47-b7c45ad9df07"/>
+        <COMPID name="Terra mosa" mc="Standard.Actor" uid="3c267dcf-25b3-4922-997b-d82e9c707c06"/>
+        <COMPID name="Operador de mantinimiento" mc="Standard.Actor" uid="89bfb2e1-0ec5-4e40-82f4-2b42db5b4698"/>
+        <COMPID name="Servicio al cliente" mc="Standard.Actor" uid="85ec6fe0-e7e0-459c-9662-168a1aa9fc7b"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

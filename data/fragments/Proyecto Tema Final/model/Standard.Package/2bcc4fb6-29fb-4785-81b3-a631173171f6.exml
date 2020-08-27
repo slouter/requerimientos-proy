@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Solicitud de cambio de fecha de viaje" version="4">
+  <OBJECT>
+    <ID name="Solicitud de cambio de fecha de viaje" mc="Standard.Package" uid="2bcc4fb6-29fb-4785-81b3-a631173171f6"/>
+    <PID name="Realizaciones del negocio" mc="Standard.Package" uid="4fccc107-1bfc-4c3e-a5d6-9e839cf5326a"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Solicitud de cambio de fecha de viaje]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="DependsOnDependency">
+        <OBJECT>
+          <ID name="" mc="Standard.ElementRealization" uid="9f0c4d5b-4ce6-4c70-b59b-b03fb5901aa1"/>
+          <ATTRIBUTES>
+            <ATT name="Mapping"></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="DependsOn">
+              <ID name="RN_Solicitud de cambio de fecha de viaje" mc="Standard.UseCase" uid="23757413-a97e-411d-9ffa-75d339c972c1"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
