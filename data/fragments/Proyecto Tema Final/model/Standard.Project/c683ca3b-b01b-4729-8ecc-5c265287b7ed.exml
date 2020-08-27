@@ -13,6 +13,8 @@
         <COMPID name="Modelo de casos de uso del Negocio" mc="Standard.Package" uid="8a70cbcb-0870-499c-82a1-cafddfbf99ed"/>
         <COMPID name="Modelo de Analisis de Negocio" mc="Standard.Package" uid="34201061-f1fd-46b5-9a7a-a8e4a881ae47"/>
         <COMPID name="Modelo de casos de Uso" mc="Standard.Package" uid="ed6531b7-a840-4400-a3a2-474b9dbc85f7"/>
+        <COMPID name="Realizacion de los Casos de Uso de Negocio" mc="Standard.Package" uid="c87730f6-86d9-48ae-a750-8258ca21e119"/>
+        <COMPID name="Trazabilidad" mc="Standard.Package" uid="ad20440b-0f16-411e-b66b-97e7586c09ee"/>
       </COMP>
       <COMP relation="DiagramRoot">
         <COMPID name="Proyecto Tema Final" mc="Infrastructure.DiagramSet" uid="c0f7e8f7-f39d-40b8-aeb3-b4c47f7067df"/>

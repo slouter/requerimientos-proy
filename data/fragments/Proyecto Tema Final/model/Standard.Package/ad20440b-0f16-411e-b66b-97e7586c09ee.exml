@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Trazabilidad" version="4">
+  <OBJECT>
+    <ID name="Trazabilidad" mc="Standard.Package" uid="ad20440b-0f16-411e-b66b-97e7586c09ee"/>
+    <PID name="Proyecto Tema Final" mc="Standard.Project" uid="c683ca3b-b01b-4729-8ecc-5c265287b7ed"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Trazabilidad]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>
